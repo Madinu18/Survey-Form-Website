@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Build A Survey Form</title>
+        <link rel="stylesheet" href="styles.css">
+    <head>
+    
+    <body>
+        <main>
+            <h1 id="title">Registration Form</h1>
+            <p id="description">Please fill out this form with the required information</p>
+            <hr>
+            <form id="survey-form">
+                <fieldset>
+                    <label for="email" id="email-label">Enter your email:
+                        <input name="email" class="not-radio" id="email" type="email" placeholder="Your email should be contain '@'" required>
+                    </label>
+                    <label for="password" id="password-label">Enter your password:
+                        <input name="password" class="not-radio" id="password" type="password" minlength="6" placeholder="Password minimal length is 6" required>
+                    </label>
+                </fieldset>
+                <hr class="dot">
+                <fieldset>
+                    <label for="name" id="name-label">Enter your full name:
+                        <input name="name" class="not-radio" id="name" type="text" placeholder="Your full name" required>
+                    </label>
+                    <label for="number" id="number-label">Enter your age:
+                        <input name="number" class="not-radio" id="number" type="number" min="12" max="100" placeholder="Your age must be between 12-100 years" required>
+                    </label>
+                    <fieldset class="exception">
+                        <legend>Select your gender</legend>
+                        <label>
+                            <input name="gender" id="male" type="radio" value="male"> Male
+                        </label>
+                        <label>
+                            <input name="gender" id="female" type="radio" value="female"> Female
+                        </label>
+                    </fieldset>
+                </fieldset>
+                <hr class="dot">
+                <fieldset>
+                    <label>Chose your account type:
+                        <select name="dropdown" id="dropdown" required>
+                            <option value="">(select one)</option>
+                            <option value="1">Free</option>
+                            <option value="2">Advance</option>
+                            <option value="3">Pro</option>
+                            <option value="4">Sponsorship</opion>
+                        </select>
+                    </label>
+                    <label>Sponsorship application (Optional):
+                        <textarea id="sponship-application" name="sponship-application" rows="3" cols="30" placeholder="This is mandatory if you are sign for sponsorship account. Please describe to us your story and your work"></textarea>
+                    </label>
+                </fieldset>
+                <hr class="dot">
+                <fieldset>
+                    <label>
+                        <input class="inline" id="term-and-conditions" name="term-and-conditions" type="checkbox" value="true" required> I accept the term and conditions 
+                    </label>
+                    <label>
+                        <input class="inline" id="receive-offer" name="receive-offer" type="checkbox" value="true" required> I want to receive offer through email 
+                    </label>
+                </fieldset>
+                <input id="submit" type="submit" value="Submit" />
+            </form>
+        </main>
+        <footer>
+            <p>Special Thanks to <a href="https://www.freecodecamp.org/learn">freecodecamp.org</a> for the free course</p>
+        </footer>
+    </body>
+<html>
